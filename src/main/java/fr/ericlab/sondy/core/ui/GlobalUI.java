@@ -14,39 +14,33 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-package main.java.fr.ericlab.sondy.core.ui;
+package fr.ericlab.sondy.core.ui;
 
-import main.java.fr.ericlab.sondy.core.app.Main;
-import main.java.fr.ericlab.sondy.core.utils.UIUtils;
-import java.io.IOException;
-import java.nio.file.Paths;
-import java.util.Set;
-import java.util.logging.Level;
-import java.util.logging.Logger;
+import fr.ericlab.sondy.algo.eventdetection.EventDetectionMethod;
+import fr.ericlab.sondy.algo.influenceanalysis.InfluenceAnalysisMethod;
+import fr.ericlab.sondy.core.app.Configuration;
+import fr.ericlab.sondy.core.app.Main;
+import fr.ericlab.sondy.core.utils.UIUtils;
 import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
-import javafx.scene.control.Label;
-import javafx.scene.control.Menu;
-import javafx.scene.control.MenuBar;
-import javafx.scene.control.MenuItem;
-import javafx.scene.control.Tab;
-import javafx.scene.control.TabPane;
-import javafx.scene.control.TextArea;
+import javafx.scene.control.*;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.VBoxBuilder;
 import javafx.scene.web.WebView;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
-import main.java.fr.ericlab.sondy.algo.eventdetection.EventDetectionMethod;
-import main.java.fr.ericlab.sondy.algo.influenceanalysis.InfluenceAnalysisMethod;
-import main.java.fr.ericlab.sondy.core.app.Configuration;
 import org.apache.commons.io.FileUtils;
 import org.reflections.Reflections;
+
+import java.io.IOException;
+import java.nio.file.Paths;
+import java.util.Set;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  *
@@ -145,7 +139,7 @@ public class GlobalUI {
             label.setId("smalltext");
             label.setText("SONDY needs to restart for the changes to take effect");
             Scene scene = new Scene(VBoxBuilder.create().children(textArea,label,saveButton,cancelButton).alignment(Pos.CENTER).padding(new Insets(10)).spacing(3).build());
-            scene.getStylesheets().add("resources/fr/ericlab/sondy/css/GlobalStyle.css");
+            scene.getStylesheets().add("fr/ericlab/sondy/css/GlobalStyle.css");
             stage.setScene(scene);
             stage.show();
         } catch (IOException ex) {
@@ -166,14 +160,14 @@ public class GlobalUI {
         webView.setMaxHeight(Main.columnWidthLEFT);
         webView.setMinHeight(Main.columnWidthLEFT);
         Scene scene = new Scene(VBoxBuilder.create().children(new Label("SONDY "+Main.version),new Label("Main developper: Adrien Guille <adrien.guille@univ-lyon2.fr>"),webView).alignment(Pos.CENTER).padding(new Insets(10)).spacing(3).build());
-        scene.getStylesheets().add("resources/fr/ericlab/sondy/css/GlobalStyle.css");
+        scene.getStylesheets().add("fr/ericlab/sondy/css/GlobalStyle.css");
         stage.setScene(scene);
         stage.show();
     }
     
     public String getReferences(){
         String references = "<html><body><h1>Event detection</h1><ul>";
-        Reflections reflections = new Reflections("main.java.fr.ericlab.sondy.algo.eventdetection");    
+        Reflections reflections = new Reflections("fr.ericlab.sondy.algo.eventdetection");
         Set<Class<? extends EventDetectionMethod>> classes = reflections.getSubTypesOf(EventDetectionMethod.class);   
         for(Class<? extends EventDetectionMethod> aClass : classes){
             try {
@@ -184,7 +178,7 @@ public class GlobalUI {
             }
         }
         references += "</ul><h1>Influence analysis</h1><ul>";
-        reflections = new Reflections("main.java.fr.ericlab.sondy.algo.influenceanalysis");    
+        reflections = new Reflections("fr.ericlab.sondy.algo.influenceanalysis");
         Set<Class<? extends InfluenceAnalysisMethod>> classes1 = reflections.getSubTypesOf(InfluenceAnalysisMethod.class);   
         for(Class<? extends InfluenceAnalysisMethod> aClass : classes1){
             try {

@@ -14,11 +14,11 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-package main.java.fr.ericlab.sondy.algo.influenceanalysis;
+package fr.ericlab.sondy.algo.influenceanalysis;
 
-import main.java.fr.ericlab.sondy.algo.Parameters;
-import main.java.fr.ericlab.sondy.core.app.AppParameters;
-import main.java.fr.ericlab.sondy.core.structures.RankedUsers;
+import fr.ericlab.sondy.algo.Parameters;
+import fr.ericlab.sondy.core.app.AppParameters;
+import fr.ericlab.sondy.core.structures.RankedUsers;
 import org.graphstream.graph.Node;
 
 /**

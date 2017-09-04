@@ -14,16 +14,16 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-package main.java.fr.ericlab.sondy.core.app;
+package fr.ericlab.sondy.core.app;
 
 import com.sun.javafx.css.StyleManager;
-import main.java.fr.ericlab.sondy.core.ui.GlobalUI;
-import java.util.Locale;
+import fr.ericlab.sondy.core.ui.GlobalUI;
 import javafx.application.Application;
-import static javafx.application.Application.launch;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 import org.controlsfx.control.PropertySheet;
+
+import java.util.Locale;
 
 /**
  *
@@ -44,7 +44,7 @@ public class Main extends Application {
         
         GlobalUI globalUI = new GlobalUI();
         Scene scene = new Scene(globalUI.globalGridPane,windowWidth,windowHeight);
-        scene.getStylesheets().add("resources/fr/ericlab/sondy/css/GlobalStyle.css");
+        scene.getStylesheets().add("fr/ericlab/sondy/css/GlobalStyle.css");//resources/fr/ericlab/sondy/css/GlobalStyle.css
         primaryStage.setTitle("SONDY "+version);
         primaryStage.setResizable(false);
         primaryStage.setScene(scene);

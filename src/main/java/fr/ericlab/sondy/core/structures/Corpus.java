@@ -14,54 +14,40 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-package main.java.fr.ericlab.sondy.core.structures;
+package fr.ericlab.sondy.core.structures;
 
 import edu.stanford.nlp.ling.CoreAnnotations;
-import edu.stanford.nlp.ling.CoreAnnotations.LemmaAnnotation;
-import edu.stanford.nlp.ling.CoreAnnotations.SentencesAnnotation;
-import edu.stanford.nlp.ling.CoreAnnotations.TokensAnnotation;
 import edu.stanford.nlp.ling.CoreLabel;
 import edu.stanford.nlp.pipeline.Annotation;
 import edu.stanford.nlp.pipeline.StanfordCoreNLP;
 import edu.stanford.nlp.util.CoreMap;
-import java.io.BufferedReader;
-import java.io.BufferedWriter;
-import main.java.fr.ericlab.sondy.core.app.Configuration;
-import main.java.fr.ericlab.sondy.core.text.index.GlobalIndexer;
-import main.java.fr.ericlab.sondy.core.text.nlp.ArabicStemming;
-import main.java.fr.ericlab.sondy.core.text.nlp.PersianStemming;
-import main.java.fr.ericlab.sondy.core.utils.PropertiesFileUtils;
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.io.FileReader;
-import java.io.FileWriter;
-import java.io.IOException;
-import java.io.ObjectInputStream;
+import fr.ericlab.sondy.core.app.Configuration;
+import fr.ericlab.sondy.core.text.index.GlobalIndexer;
+import fr.ericlab.sondy.core.text.index.Tokenizer;
+import fr.ericlab.sondy.core.text.nlp.ArabicStemming;
+import fr.ericlab.sondy.core.text.nlp.EnglishStemming;
+import fr.ericlab.sondy.core.text.nlp.FrenchStemming;
+import fr.ericlab.sondy.core.text.nlp.PersianStemming;
+import fr.ericlab.sondy.core.utils.ArrayUtils;
+import fr.ericlab.sondy.core.utils.PropertiesFileUtils;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
+import org.apache.commons.io.FileUtils;
+import org.apache.commons.io.LineIterator;
+import org.apache.commons.lang3.StringUtils;
+import org.apache.lucene.analysis.Analyzer;
+import org.apache.lucene.analysis.standard.StandardAnalyzer;
+
+import java.io.*;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.text.DecimalFormat;
 import java.text.NumberFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Properties;
+import java.util.*;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import javafx.collections.FXCollections;
-import javafx.collections.ObservableList;
-import main.java.fr.ericlab.sondy.core.text.index.Tokenizer;
-import main.java.fr.ericlab.sondy.core.text.nlp.EnglishStemming;
-import main.java.fr.ericlab.sondy.core.text.nlp.FrenchStemming;
-import main.java.fr.ericlab.sondy.core.utils.ArrayUtils;
-import org.apache.commons.io.FileUtils;
-import org.apache.commons.io.LineIterator;
-import org.apache.commons.lang3.StringUtils;
-import org.apache.lucene.analysis.Analyzer;
-import org.apache.lucene.analysis.standard.StandardAnalyzer;
 
 /**
  *

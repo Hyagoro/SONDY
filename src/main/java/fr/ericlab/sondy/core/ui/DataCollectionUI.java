@@ -14,12 +14,11 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-package main.java.fr.ericlab.sondy.core.ui;
+package fr.ericlab.sondy.core.ui;
 
-import java.nio.file.Paths;
-import main.java.fr.ericlab.sondy.core.app.Main;
-import main.java.fr.ericlab.sondy.core.sources.DataSources;
-import main.java.fr.ericlab.sondy.core.utils.UIUtils;
+import fr.ericlab.sondy.core.app.Main;
+import fr.ericlab.sondy.core.sources.DataSources;
+import fr.ericlab.sondy.core.utils.UIUtils;
 import javafx.beans.value.ObservableValue;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -27,13 +26,7 @@ import javafx.event.ActionEvent;
 import javafx.geometry.Insets;
 import javafx.geometry.Orientation;
 import javafx.geometry.Pos;
-import javafx.scene.control.Button;
-import javafx.scene.control.ChoiceBox;
-import javafx.scene.control.Label;
-import javafx.scene.control.ListView;
-import javafx.scene.control.Separator;
-import javafx.scene.control.TextArea;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;

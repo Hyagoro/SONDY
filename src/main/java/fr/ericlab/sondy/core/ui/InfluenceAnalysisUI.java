@@ -14,22 +14,21 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-package main.java.fr.ericlab.sondy.core.ui;
+package fr.ericlab.sondy.core.ui;
 
-import java.time.Instant;
-import java.util.Date;
-import java.util.HashMap;
-import java.util.Set;
-import java.util.concurrent.ExecutorService;
-import java.util.concurrent.Executors;
-import java.util.logging.Level;
-import java.util.logging.Logger;
+import fr.ericlab.sondy.algo.Parameter;
+import fr.ericlab.sondy.algo.influenceanalysis.InfluenceAnalysisMethod;
+import fr.ericlab.sondy.core.app.AppParameters;
+import fr.ericlab.sondy.core.app.Main;
+import fr.ericlab.sondy.core.structures.Message;
+import fr.ericlab.sondy.core.utils.ArrayUtils;
+import fr.ericlab.sondy.core.utils.CustomSwingNode;
+import fr.ericlab.sondy.core.utils.UIUtils;
 import javafx.beans.value.ObservableValue;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.concurrent.Task;
 import javafx.concurrent.WorkerStateEvent;
-import main.java.fr.ericlab.sondy.core.app.Main;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.geometry.Insets;
@@ -40,14 +39,7 @@ import javafx.scene.chart.BarChart;
 import javafx.scene.chart.CategoryAxis;
 import javafx.scene.chart.NumberAxis;
 import javafx.scene.chart.XYChart;
-import javafx.scene.control.Button;
-import javafx.scene.control.ChoiceBox;
-import javafx.scene.control.Label;
-import javafx.scene.control.ListView;
-import javafx.scene.control.Separator;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableView;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.control.cell.TextFieldTableCell;
 import javafx.scene.input.MouseButton;
@@ -64,19 +56,21 @@ import javafx.scene.text.Text;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
-import main.java.fr.ericlab.sondy.algo.Parameter;
-import main.java.fr.ericlab.sondy.algo.influenceanalysis.InfluenceAnalysisMethod;
-import main.java.fr.ericlab.sondy.core.app.AppParameters;
-import main.java.fr.ericlab.sondy.core.structures.Message;
-import main.java.fr.ericlab.sondy.core.utils.ArrayUtils;
-import main.java.fr.ericlab.sondy.core.utils.CustomSwingNode;
-import main.java.fr.ericlab.sondy.core.utils.UIUtils;
 import org.apache.commons.lang3.StringUtils;
 import org.graphstream.graph.Node;
 import org.graphstream.ui.geom.Point3;
 import org.graphstream.ui.swingViewer.View;
 import org.graphstream.ui.swingViewer.Viewer;
 import org.reflections.Reflections;
+
+import java.time.Instant;
+import java.util.Date;
+import java.util.HashMap;
+import java.util.Set;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  *
@@ -316,7 +310,7 @@ public class InfluenceAnalysisUI {
     }
     
     public final void updateAvailableMethods(){
-        Reflections reflections = new Reflections("main.java.fr.ericlab.sondy.algo.influenceanalysis");    
+        Reflections reflections = new Reflections("fr.ericlab.sondy.algo.influenceanalysis");
         Set<Class<? extends InfluenceAnalysisMethod>> classes = reflections.getSubTypesOf(InfluenceAnalysisMethod.class);   
         for(Class<? extends InfluenceAnalysisMethod> aClass : classes){
             try {
@@ -404,7 +398,7 @@ public class InfluenceAnalysisUI {
         });
         
         Scene scene = new Scene(VBoxBuilder.create().children(new Text("User"),new Separator(),new Label(user),tableText,new Separator(),messageTable,filterMessagesHBox,filterMessagesButton).alignment(Pos.CENTER).padding(new Insets(10)).spacing(3).build());
-        scene.getStylesheets().add("resources/fr/ericlab/sondy/css/GlobalStyle.css");
+        scene.getStylesheets().add("fr/ericlab/sondy/css/GlobalStyle.css");
         stage.setScene(scene);
         stage.show();
     }

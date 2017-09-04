@@ -14,13 +14,13 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-package main.java.fr.ericlab.sondy.algo.eventdetection;
+package fr.ericlab.sondy.algo.eventdetection;
 
 import java.text.NumberFormat;
 import java.util.Locale;
-import main.java.fr.ericlab.sondy.core.structures.Events;
-import main.java.fr.ericlab.sondy.algo.Parameters;
-import main.java.fr.ericlab.sondy.core.structures.Event;
+import fr.ericlab.sondy.core.structures.Events;
+import fr.ericlab.sondy.algo.Parameters;
+import fr.ericlab.sondy.core.structures.Event;
 
 /**
  *

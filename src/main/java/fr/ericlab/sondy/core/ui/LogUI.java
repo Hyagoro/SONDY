@@ -14,11 +14,11 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-package main.java.fr.ericlab.sondy.core.ui;
+package fr.ericlab.sondy.core.ui;
 
-import main.java.fr.ericlab.sondy.core.app.Main;
-import main.java.fr.ericlab.sondy.core.structures.LogEntry;
-import main.java.fr.ericlab.sondy.core.utils.UIUtils;
+import fr.ericlab.sondy.core.app.Main;
+import fr.ericlab.sondy.core.structures.LogEntry;
+import fr.ericlab.sondy.core.utils.UIUtils;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.control.Label;

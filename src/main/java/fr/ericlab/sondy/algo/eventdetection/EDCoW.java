@@ -14,25 +14,25 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-package main.java.fr.ericlab.sondy.algo.eventdetection;
+package fr.ericlab.sondy.algo.eventdetection;
 
 import ch.epfl.lis.jmod.modularity.community.Community;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Collections;
-import main.java.fr.ericlab.sondy.core.app.AppParameters;
-import main.java.fr.ericlab.sondy.core.structures.Event;
-import main.java.fr.ericlab.sondy.algo.Parameter;
+import fr.ericlab.sondy.core.app.AppParameters;
+import fr.ericlab.sondy.core.structures.Event;
+import fr.ericlab.sondy.algo.Parameter;
 import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.Map;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import main.java.fr.ericlab.sondy.algo.eventdetection.edcow.EDCoWEvent;
-import main.java.fr.ericlab.sondy.algo.eventdetection.edcow.EDCoWKeyword;
-import main.java.fr.ericlab.sondy.algo.eventdetection.edcow.EDCoWModularityDetection;
-import main.java.fr.ericlab.sondy.algo.eventdetection.edcow.EDCoWThreshold;
-import main.java.fr.ericlab.sondy.core.structures.Events;
+import fr.ericlab.sondy.algo.eventdetection.edcow.EDCoWEvent;
+import fr.ericlab.sondy.algo.eventdetection.edcow.EDCoWKeyword;
+import fr.ericlab.sondy.algo.eventdetection.edcow.EDCoWModularityDetection;
+import fr.ericlab.sondy.algo.eventdetection.edcow.EDCoWThreshold;
+import fr.ericlab.sondy.core.structures.Events;
 
 /**
  *

@@ -14,19 +14,19 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-package main.java.fr.ericlab.sondy.core.ui;
+package fr.ericlab.sondy.core.ui;
 
 import java.time.Instant;
 import java.util.Date;
-import main.java.fr.ericlab.sondy.algo.eventdetection.EventDetectionMethod;
-import main.java.fr.ericlab.sondy.core.app.AppParameters;
-import main.java.fr.ericlab.sondy.core.app.Main;
-import main.java.fr.ericlab.sondy.core.structures.Event;
-import main.java.fr.ericlab.sondy.core.structures.Events;
-import main.java.fr.ericlab.sondy.algo.Parameter;
-import main.java.fr.ericlab.sondy.core.ui.factories.EventTableContextMenu;
-import main.java.fr.ericlab.sondy.core.utils.ArrayUtils;
-import main.java.fr.ericlab.sondy.core.utils.UIUtils;
+import fr.ericlab.sondy.algo.eventdetection.EventDetectionMethod;
+import fr.ericlab.sondy.core.app.AppParameters;
+import fr.ericlab.sondy.core.app.Main;
+import fr.ericlab.sondy.core.structures.Event;
+import fr.ericlab.sondy.core.structures.Events;
+import fr.ericlab.sondy.algo.Parameter;
+import fr.ericlab.sondy.core.ui.factories.EventTableContextMenu;
+import fr.ericlab.sondy.core.utils.ArrayUtils;
+import fr.ericlab.sondy.core.utils.UIUtils;
 import java.util.HashMap;
 import java.util.Set;
 import java.util.concurrent.ExecutorService;
@@ -82,7 +82,7 @@ import javafx.scene.text.Text;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
-import main.java.fr.ericlab.sondy.core.structures.Message;
+import fr.ericlab.sondy.core.structures.Message;
 import org.reflections.Reflections;
 
 /**
@@ -295,7 +295,7 @@ public class EventDetectionUI {
     }
     
     public final void updateAvailableMethods(){
-        Reflections reflections = new Reflections("main.java.fr.ericlab.sondy.algo.eventdetection");    
+        Reflections reflections = new Reflections("fr.ericlab.sondy.algo.eventdetection");
         Set<Class<? extends EventDetectionMethod>> classes = reflections.getSubTypesOf(EventDetectionMethod.class);   
         for(Class<? extends EventDetectionMethod> aClass : classes){
             try {
@@ -408,7 +408,7 @@ public class EventDetectionUI {
         });
         
         Scene scene = new Scene(VBoxBuilder.create().children(new Text("Topic"),new Separator(),topicLabel,new Text("Time interval"),new Separator(),intervalLabel,tableText,new Separator(),messageTable,filterMessagesHBox,filterMessagesButton).alignment(Pos.CENTER).padding(new Insets(10)).spacing(3).build());
-        scene.getStylesheets().add("resources/fr/ericlab/sondy/css/GlobalStyle.css");
+        scene.getStylesheets().add("fr/ericlab/sondy/css/GlobalStyle.css");
         stage.setScene(scene);
         stage.show();
     }
@@ -481,7 +481,7 @@ public class EventDetectionUI {
         
         timelineBox.getChildren().addAll(groupTimeline,closeButton);
         Scene sceneTimeline = new Scene(VBoxBuilder.create().children(groupTimeline,closeButton).alignment(Pos.CENTER).padding(new Insets(10)).spacing(3).build());
-        sceneTimeline.getStylesheets().add("resources/fr/ericlab/sondy/css/GlobalStyle.css");
+        sceneTimeline.getStylesheets().add("fr/ericlab/sondy/css/GlobalStyle.css");
         dialogStageTimeline.initStyle(StageStyle.UNDECORATED);
         dialogStageTimeline.initModality(Modality.APPLICATION_MODAL);
         dialogStageTimeline.setScene(sceneTimeline);

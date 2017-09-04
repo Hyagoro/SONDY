@@ -14,10 +14,10 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-package main.java.fr.ericlab.sondy.core.structures;
+package fr.ericlab.sondy.core.structures;
 
-import main.java.fr.ericlab.sondy.core.app.Configuration;
-import main.java.fr.ericlab.sondy.core.utils.PropertiesFileUtils;
+import fr.ericlab.sondy.core.app.Configuration;
+import fr.ericlab.sondy.core.utils.PropertiesFileUtils;
 import java.io.File;
 import java.nio.file.Path;
 import java.nio.file.Paths;

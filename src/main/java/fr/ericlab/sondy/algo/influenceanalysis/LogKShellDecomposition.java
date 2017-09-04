@@ -14,10 +14,10 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-package main.java.fr.ericlab.sondy.algo.influenceanalysis;
+package fr.ericlab.sondy.algo.influenceanalysis;
 
 import java.util.HashMap;
-import main.java.fr.ericlab.sondy.core.app.AppParameters;
+import fr.ericlab.sondy.core.app.AppParameters;
 import org.graphstream.graph.Edge;
 import org.graphstream.graph.Node;
 

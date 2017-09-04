@@ -14,25 +14,25 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-package main.java.fr.ericlab.sondy.algo.eventdetection;
+package fr.ericlab.sondy.algo.eventdetection;
 
-import main.java.fr.ericlab.sondy.core.app.AppParameters;
-import main.java.fr.ericlab.sondy.core.structures.Event;
-import main.java.fr.ericlab.sondy.algo.Parameter;
-import main.java.fr.ericlab.sondy.algo.eventdetection.mabed.MABEDComponent1;
-import main.java.fr.ericlab.sondy.algo.eventdetection.mabed.MABEDComponent2;
-import main.java.fr.ericlab.sondy.algo.eventdetection.mabed.MABEDEvent;
-import main.java.fr.ericlab.sondy.algo.eventdetection.mabed.MABEDEventGraph;
-import main.java.fr.ericlab.sondy.algo.eventdetection.mabed.MABEDEventList;
-import main.java.fr.ericlab.sondy.core.app.Configuration;
-import main.java.fr.ericlab.sondy.core.utils.HashMapUtils;
+import fr.ericlab.sondy.core.app.AppParameters;
+import fr.ericlab.sondy.core.structures.Event;
+import fr.ericlab.sondy.algo.Parameter;
+import fr.ericlab.sondy.algo.eventdetection.mabed.MABEDComponent1;
+import fr.ericlab.sondy.algo.eventdetection.mabed.MABEDComponent2;
+import fr.ericlab.sondy.algo.eventdetection.mabed.MABEDEvent;
+import fr.ericlab.sondy.algo.eventdetection.mabed.MABEDEventGraph;
+import fr.ericlab.sondy.algo.eventdetection.mabed.MABEDEventList;
+import fr.ericlab.sondy.core.app.Configuration;
+import fr.ericlab.sondy.core.utils.HashMapUtils;
 import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.Map;
 import java.util.Set;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import main.java.fr.ericlab.sondy.core.structures.Events;
+import fr.ericlab.sondy.core.structures.Events;
 
 /**
  *

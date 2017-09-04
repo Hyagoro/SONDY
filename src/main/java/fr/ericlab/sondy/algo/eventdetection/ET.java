@@ -14,9 +14,9 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-package main.java.fr.ericlab.sondy.algo.eventdetection;
+package fr.ericlab.sondy.algo.eventdetection;
 
-import main.java.fr.ericlab.sondy.algo.Parameter;
+import fr.ericlab.sondy.algo.Parameter;
 
 /**
  *

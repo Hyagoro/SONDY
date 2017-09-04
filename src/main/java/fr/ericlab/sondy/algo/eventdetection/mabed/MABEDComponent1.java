@@ -14,10 +14,10 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-package main.java.fr.ericlab.sondy.algo.eventdetection.mabed;
+package fr.ericlab.sondy.algo.eventdetection.mabed;
 
-import main.java.fr.ericlab.sondy.core.app.AppParameters;
-import main.java.fr.ericlab.sondy.core.utils.ArrayUtils;
+import fr.ericlab.sondy.core.app.AppParameters;
+import fr.ericlab.sondy.core.utils.ArrayUtils;
 import java.util.ArrayList;
 import java.util.LinkedList;
 

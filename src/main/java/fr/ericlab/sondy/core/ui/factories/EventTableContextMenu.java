@@ -14,7 +14,7 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-package main.java.fr.ericlab.sondy.core.ui.factories;
+package fr.ericlab.sondy.core.ui.factories;
 
 import javafx.event.EventHandler;
 import javafx.scene.control.ContextMenu;

@@ -14,10 +14,10 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-package main.java.fr.ericlab.sondy.core.text.index;
+package fr.ericlab.sondy.core.text.index;
 
-import main.java.fr.ericlab.sondy.core.app.AppParameters;
-import main.java.fr.ericlab.sondy.core.utils.HashMapUtils;
+import fr.ericlab.sondy.core.app.AppParameters;
+import fr.ericlab.sondy.core.utils.HashMapUtils;
 import java.io.File;
 import java.io.IOException;
 import java.io.StringReader;

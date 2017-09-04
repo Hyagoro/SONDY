@@ -14,16 +14,16 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-package main.java.fr.ericlab.sondy.core.ui;
+package fr.ericlab.sondy.core.ui;
 
 import com.sun.javafx.css.StyleManager;
 import impl.org.controlsfx.skin.CheckComboBoxSkin;
-import main.java.fr.ericlab.sondy.core.app.Main;
-import main.java.fr.ericlab.sondy.core.app.AppParameters;
-import main.java.fr.ericlab.sondy.core.structures.Dataset;
-import main.java.fr.ericlab.sondy.core.structures.Datasets;
-import main.java.fr.ericlab.sondy.core.text.stopwords.StopwordSets;
-import main.java.fr.ericlab.sondy.core.utils.UIUtils;
+import fr.ericlab.sondy.core.app.Main;
+import fr.ericlab.sondy.core.app.AppParameters;
+import fr.ericlab.sondy.core.structures.Dataset;
+import fr.ericlab.sondy.core.structures.Datasets;
+import fr.ericlab.sondy.core.text.stopwords.StopwordSets;
+import fr.ericlab.sondy.core.utils.UIUtils;
 import java.io.File;
 import java.nio.file.Paths;
 import java.util.HashMap;

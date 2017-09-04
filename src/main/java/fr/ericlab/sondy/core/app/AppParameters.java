@@ -14,13 +14,13 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-package main.java.fr.ericlab.sondy.core.app;
+package fr.ericlab.sondy.core.app;
 
-import main.java.fr.ericlab.sondy.core.structures.Dataset;
-import main.java.fr.ericlab.sondy.core.structures.Event;
-import main.java.fr.ericlab.sondy.core.text.stopwords.StopwordSet;
-import main.java.fr.ericlab.sondy.core.ui.GlobalUI;
-import main.java.fr.ericlab.sondy.core.ui.LogUI;
+import fr.ericlab.sondy.core.structures.Dataset;
+import fr.ericlab.sondy.core.structures.Event;
+import fr.ericlab.sondy.core.text.stopwords.StopwordSet;
+import fr.ericlab.sondy.core.ui.GlobalUI;
+import fr.ericlab.sondy.core.ui.LogUI;
 import java.util.HashSet;
 import javafx.collections.ObservableList;
 import org.graphstream.graph.implementations.DefaultGraph;
